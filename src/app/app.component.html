@@ -1,0 +1,100 @@
+<section class="container" (window:resize)="onResize($event)">
+  <div class="nav">
+    <img class="profile-pic" src="https://i.imgur.com/HUeGiO7.jpg" />
+    <h1 class="name">Luis Hermida</h1>
+    <h2 class="career">Software Engineer</h2>
+    <div *ngIf="!isMobile" class="nav-list-container">
+      <ul class="nav-list">
+        <a routerLink="/experience" routerLinkActive="active-link">
+          Experience
+        </a>
+        <a routerLink="/react" routerLinkActive="active-link">
+          React
+        </a>
+        <a routerLink="/mobile-development" routerLinkActive="active-link">
+          Mobile Development
+        </a>
+        <a routerLink="/web-development" routerLinkActive="active-link">
+          Web Development
+        </a>
+        <a routerLink="/nodejs" routerLinkActive="active-link">
+          NodeJS
+        </a>
+        <a routerLink="/python" routerLinkActive="active-link">
+          Python
+        </a>
+        <a routerLink="/certifications" routerLinkActive="active-link">
+          Certifications
+        </a>
+        <a routerLink="/contact" routerLinkActive="active-link">
+          Contact
+        </a>
+        <a
+          href="https://drive.google.com/open?id=1DEHI3UJx7-vJqLZ8sPRceTN-BsgAgbHL"
+        >
+          Curriculum
+        </a>
+      </ul>
+    </div>
+    <div class="social-icons">
+      <a
+        href="https://drive.google.com/open?id=1DEHI3UJx7-vJqLZ8sPRceTN-BsgAgbHL"
+      >
+        <fa-icon [icon]="faFileAlt" size="2x"></fa-icon>
+      </a>
+      <a href="https://github.com/Luis-Hermida" target="_blank">
+        <fa-icon [icon]="faGithubSquare" size="2x"></fa-icon>
+      </a>
+      <a href="https://www.linkedin.com/in/luishn94/" target="_blank">
+        <fa-icon [icon]="faLinkedinIn" size="2x"></fa-icon>
+      </a>
+      <fa-icon
+        *ngIf="isMobile"
+        (click)="onToggleMenu()"
+        [icon]="faBars"
+        size="2x"
+        class="menu-button"
+      ></fa-icon>
+    </div>
+  </div>
+
+  <div *ngIf="isMobile && isMenuOpen" class="menu">
+    <div class="nav-list-container">
+      <ul class="nav-list">
+        <a routerLink="/experience" routerLinkActive="active-link">
+          <li>Experience</li>
+        </a>
+        <a routerLink="/react" routerLinkActive="active-link">
+          <li>React</li>
+        </a>
+        <a routerLink="/mobile-development" routerLinkActive="active-link">
+          <li>Mobile Development</li>
+        </a>
+        <a routerLink="/web-development" routerLinkActive="active-link">
+          <li>Web Development</li>
+        </a>
+        <a routerLink="/nodejs" routerLinkActive="active-link">
+          <li>NodeJS</li>
+        </a>
+        <a routerLink="/python" routerLinkActive="active-link">
+          <li>Python</li>
+        </a>
+        <a routerLink="/certifications" routerLinkActive="active-link">
+          <li>Certifications</li>
+        </a>
+        <a routerLink="/contact" routerLinkActive="active-link">
+          <li>Contact</li>
+        </a>
+        <a
+          href="https://drive.google.com/open?id=1DEHI3UJx7-vJqLZ8sPRceTN-BsgAgbHL"
+        >
+          <li>Curriculum</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</section>

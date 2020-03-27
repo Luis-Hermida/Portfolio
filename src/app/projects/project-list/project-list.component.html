@@ -1,0 +1,45 @@
+<div class="filter-section">
+  <div *ngFor="let technology of usedTechnologies">
+    <button
+      (click)="setTechnologiesFilter(technology)"
+      class="filter-button"
+      [ngClass]="{
+        active: technology === activeTechnologiesFilter,
+        inactive: technology !== activeTechnologiesFilter
+      }"
+    >
+      {{ technology }}
+    </button>
+  </div>
+</div>
+
+<div class="project-section">
+  <div *ngFor="let project of activeProjects" class="project-card">
+    <h1>{{ project.name }}</h1>
+    <img
+      *ngIf="project.image"
+      src="{{ project.image }}"
+      (click)="openDialog(project.projectImages)"
+      class="project-image"
+    />
+    <h2 class="project-description">{{ project.description }}</h2>
+    <hr />
+    <h3>Technologies</h3>
+    <div *ngIf="project.technologies" class="technology-section">
+      <button
+        *ngFor="let technology of project.technologies"
+        class="technology-button"
+      >
+        <p>{{ technology }}</p>
+      </button>
+    </div>
+    <hr />
+    <div class="url-section">
+      <a *ngIf="project.demoUrl" href="{{ project.demoUrl }}"> Demo </a>
+      <a *ngIf="project.codeUrl" href="{{ project.codeUrl }}"> Code </a>
+      <a *ngIf="project.downloadUrl" href="{{ project.downloadUrl }}">
+        Download
+      </a>
+    </div>
+  </div>
+</div>
