@@ -16,7 +16,7 @@ import { MobileDevelopmentComponent } from './mobile-development/mobile-developm
 import { WebDevelopmentComponent } from './web-development/web-development.component';
 import { NodejsComponent } from './nodejs/nodejs.component';
 import { PythonComponent } from './python/python.component';
-
+import { CertificationsComponent } from './certifications/certifications.component';
 import { ContactComponent } from './contact/contact.component';
 
 import {
@@ -28,7 +28,6 @@ import { mobileProjects } from './projects/mobile';
 import { webProjects } from './projects/web';
 import { nodeProjects } from './projects/node';
 import { pythonProjects } from './projects/python';
-import { CertificationsComponent } from './Certifications/certifications.component';
 
 const appRoutes: Routes = [
   { path: 'experience', component: ExperienceComponent },
