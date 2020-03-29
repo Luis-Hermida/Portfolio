@@ -1,14 +1,32 @@
 .title {
   padding-left: 8px;
   display: inline-block;
-  background-color: #F18F43;
-  background-image: linear-gradient(45deg,
-      #0f89ca 16.666%,
-      #1DA2DC 20%,
-      #89ca0f 83.333%);
+  background-color: #f18f43;
+  background-image: linear-gradient(
+    45deg,
+    #0f89ca 16.666%,
+    #1da2dc 20%,
+    #89ca0f 83.333%
+  );
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (min-width: 2000px) {
+  .title {
+    font-size: 220%;
+    margin: 0.5em;
+    padding: 0.5em;
+    margin-left: 0;
+    padding-left: 8px;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .title {
+    font-size: 440%;
+  }
 }

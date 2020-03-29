@@ -6,7 +6,16 @@ export const reactProjects = [
     demoUrl: "",
     codeUrl: "https://github.com/Luis-Hermida/Tetris-React",
     downloadUrl: "",
-    technologies: ["React"],
+    technologies: [
+      "React",
+      "React",
+      "React",
+      "React",
+      "React",
+      "React",
+      "React",
+      "React"
+    ],
     projectImages: [
       "../../assets/certificates/react.png",
       "../../assets/certificates/react_native.png"
@@ -27,9 +36,9 @@ export const reactProjects = [
     image: "../../assets/nav-background.jpg",
     description:
       "Basic React/Express API with authentication using Auth0 and JWT.",
-    demoUrl: "",
+    demoUrl: "https://auth0-lahn.herokuapp.com/",
     codeUrl: "https://github.com/Luis-Hermida/Auth0-Demo",
-    downloadUrl: "",
+    downloadUrl: "https://github.com/Luis-Hermida/Auth0-Demo",
     technologies: ["React", "Express", "Auth0"]
   },
   {

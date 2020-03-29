@@ -20,10 +20,12 @@
 }
 
 .active {
-  background-image: linear-gradient(45deg,
-      #89ca0f 16.666%,
-      #1da2dc 60%,
-      #0f89ca 83.333%);
+  background-image: linear-gradient(
+    45deg,
+    #89ca0f 16.666%,
+    #1da2dc 60%,
+    #0f89ca 83.333%
+  );
 }
 
 .inactive {
@@ -34,18 +36,22 @@
 .filter-button:hover {
   cursor: pointer;
   border: none;
-  background-image: linear-gradient(45deg,
-      #f05123 30.666%,
-      #ee224a 55%,
-      #f05561 90.333%);
+  background-image: linear-gradient(
+    45deg,
+    #f05123 30.666%,
+    #ee224a 55%,
+    #f05561 90.333%
+  );
   color: #f0e995;
 }
 
 .filter-button:active {
-  background-image: linear-gradient(45deg,
-      #b83c1a 30.666%,
-      #be1c3c 55%,
-      #91343c 90.333%);
+  background-image: linear-gradient(
+    45deg,
+    #b83c1a 30.666%,
+    #be1c3c 55%,
+    #91343c 90.333%
+  );
   color: #f0e995;
   transform: translateY(1px);
 }
@@ -161,10 +167,12 @@ hr {
   height: 2px;
   background-color: #ddd;
   transition: width 0.5s;
-  background-image: linear-gradient(45deg,
-      #0f89ca 16.666%,
-      #1da2dc 20%,
-      #89ca0f 83.333%);
+  background-image: linear-gradient(
+    45deg,
+    #0f89ca 16.666%,
+    #1da2dc 20%,
+    #89ca0f 83.333%
+  );
   background-size: 100%;
   background-repeat: repeat;
   -webkit-text-fill-color: transparent;
@@ -174,13 +182,122 @@ hr {
   width: 100%;
 }
 
+.project-dialog mat-dialog-content {
+  padding: 0 !important;
+  background-color: red;
+}
+
 @media only screen and (max-width: 1020px) {
   .project-section {
     justify-content: center;
   }
 }
 
-.project-dialog mat-dialog-content {
-  padding: 0 !important;
-  background-color: red;
+@media only screen and (min-width: 2000px) {
+  .filter-button {
+    margin: 16px 16px 16px 0;
+    padding: 18px;
+    border-radius: 35px;
+    font-size: 180%;
+  }
+
+  .project-card {
+    width: 500px;
+  }
+
+  .project-description {
+    height: 120px;
+  }
+
+  .technology-section {
+    height: 140px;
+  }
+
+  hr {
+    border-top: 2px solid #ddd;
+  }
+
+  .project-image {
+    width: 500px;
+    height: 300px;
+  }
+
+  .project-card h1 {
+    font-size: 220%;
+    padding: 32px;
+    padding-left: 16px;
+  }
+
+  .project-card h2,
+  .project-card h3 {
+    line-height: 1.6;
+    font-size: 180%;
+  }
+
+  .technology-button {
+    margin: 10px 10px 10px 0;
+    padding: 12px;
+    border-radius: 30px;
+    font-size: 150%;
+  }
+
+  .url-section {
+    margin: 1em;
+  }
+
+  .url-section a {
+    font-size: 180%;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .filter-button {
+    margin: 20px 20px 20px 0;
+    padding: 22px;
+    border-radius: 42px;
+    font-size: 225%;
+  }
+
+  .project-card {
+    width: 625px;
+  }
+
+  .project-description {
+    height: 150px;
+  }
+
+  .technology-section {
+    height: 180px;
+  }
+
+  hr {
+    border-top: 4px solid #ddd;
+  }
+
+  .project-image {
+    width: 625px;
+    height: 375px;
+  }
+
+  .project-card h1 {
+    font-size: 275%;
+    padding: 40px;
+  }
+
+  .project-card h2,
+  .project-card h3 {
+    font-size: 225%;
+  }
+
+  .technology-button {
+    margin: 12px 12px 12px 0;
+    padding: 14px;
+    border-radius: 37px;
+    font-size: 185%;
+  }
+
+  .url-section a {
+    font-size: 225%;
+    padding: 16px 0;
+  }
 }

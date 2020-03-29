@@ -1,12 +1,12 @@
 export const webProjects = [
   {
-    name: 'Tetris React',
+    name: 'Portfolio',
     image: '../../assets/nav-background.jpg',
-    description: 'Tetris game with levels and score. Made using React hooks.',
-    demoUrl: '',
-    codeUrl: 'https://github.com/Luis-Hermida/Tetris-React',
-    downloadUrL: '',
-    technologies: ['React'],
+    description: 'The code of this portfolio with projects made using Angular',
+    demoUrl: 'https://portfolio-lahn.herokuapp.com/',
+    codeUrl: 'https://github.com/Luis-Hermida/Portfolio',
+    downloadUrL: 'https://github.com/Luis-Hermida/Portfolio',
+    technologies: ['Angular'],
     projectImages: [
       '../../assets/certificates/react.png',
       '../../assets/certificates/react_native.png'
