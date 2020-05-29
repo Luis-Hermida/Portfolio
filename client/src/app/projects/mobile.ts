@@ -3,14 +3,11 @@ export const mobileProjects = [
     name: 'React Native Demo',
     image: '../../assets/nav-background.jpg',
     description:
-      'Complete restaurant App using React Native, Redux and several React Native libraries.',
+      'App that simulates a restaurant page with serveral routes and functional forms.',
     demoUrl: '',
-    codeUrl: 'https://github.com/Luis-Hermida/Tetris-React',
-    downloadUrL: '',
+    codeUrl: 'https://github.com/Luis-Hermida/reactn-restaurant',
+    downloadUrL: 'https://github.com/Luis-Hermida/reactn-restaurant',
     technologies: ['React Native', 'Redux'],
-    projectImages: [
-      '../../assets/certificates/react.png',
-      '../../assets/certificates/react_native.png'
-    ]
-  }
+    projectImages: [],
+  },
 ];

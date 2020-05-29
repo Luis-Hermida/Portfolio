@@ -3,23 +3,19 @@ import { IProject } from '../project';
 import {
   MatDialog,
   MatDialogRef,
-  MAT_DIALOG_DATA
+  MAT_DIALOG_DATA,
 } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
-  styleUrls: ['./project-list.component.scss']
+  styleUrls: ['./project-list.component.scss'],
 })
 export class ProjectListComponent implements OnInit {
   @Input() projects: Array<IProject>;
   usedTechnologies = ['All'];
   activeTechnologiesFilter = 'All';
   activeProjects: Array<IProject>;
-  slides = [
-    '../../assets/certificates/react.png',
-    '../../assets/certificates/react_native.png'
-  ];
 
   constructor(private dialog: MatDialog) {}
   ngOnInit(): void {
@@ -28,8 +24,8 @@ export class ProjectListComponent implements OnInit {
   }
 
   getUsedTechnologies(projects: Array<IProject>) {
-    projects.map(project =>
-      project.technologies.map(technology => {
+    projects.map((project) =>
+      project.technologies.map((technology) => {
         if (!this.usedTechnologies.includes(technology)) {
           this.usedTechnologies.push(technology);
         }
@@ -55,7 +51,7 @@ export class ProjectListComponent implements OnInit {
   }
 
   setCustomTechnologyFilter(filter: string) {
-    this.projects.map(project => {
+    this.projects.map((project) => {
       if (project.technologies.includes(filter)) {
         this.activeProjects.push(project);
       }
@@ -68,7 +64,7 @@ export class ProjectListComponent implements OnInit {
       maxWidth: '900px',
       width: '50%',
       panelClass: 'project-dialog',
-      data: { images }
+      data: { images },
     });
   }
 }
@@ -76,7 +72,7 @@ export class ProjectListComponent implements OnInit {
 @Component({
   selector: 'app-project-dialog',
   templateUrl: './project-dialog.component.html',
-  styleUrls: ['./project-dialog.component.scss']
+  styleUrls: ['./project-dialog.component.scss'],
 })
 export class ProjectDialogComponent {
   numberOfImages: number;

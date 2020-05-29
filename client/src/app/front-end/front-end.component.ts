@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { IProject } from '../projects/project';
 
 @Component({
-  selector: 'app-nodejs',
-  templateUrl: './nodejs.component.html',
-  styleUrls: ['./nodejs.component.scss']
+  selector: 'app-front-end',
+  templateUrl: './front-end.component.html',
+  styleUrls: ['./front-end.component.scss'],
 })
-export class NodejsComponent implements OnInit {
+export class FrontEndComponent implements OnInit {
   projects: IProject[];
 
   constructor(private route: ActivatedRoute) {}

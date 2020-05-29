@@ -11,69 +11,54 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { ExperienceComponent } from './experience/experience.component';
-import { ReactComponent } from './react/react.component';
+import { FrontEndComponent } from './front-end/front-end.component';
+import { BackEndComponent } from './back-end/back-end.component';
 import { MobileDevelopmentComponent } from './mobile-development/mobile-development.component';
-import { WebDevelopmentComponent } from './web-development/web-development.component';
-import { NodejsComponent } from './nodejs/nodejs.component';
-import { PythonComponent } from './python/python.component';
+
 import { CertificationsComponent } from './certifications/certifications.component';
 import { ContactComponent } from './contact/contact.component';
 
 import {
   ProjectListComponent,
-  ProjectDialogComponent
+  ProjectDialogComponent,
 } from './projects/project-list/project-list.component';
-import { reactProjects } from './projects/react';
+import { frontEndProjects } from './projects/front-end';
+import { backEndProjects } from './projects/back-end';
 import { mobileProjects } from './projects/mobile';
-import { webProjects } from './projects/web';
-import { nodeProjects } from './projects/node';
-import { pythonProjects } from './projects/python';
 
 const appRoutes: Routes = [
   { path: 'experience', component: ExperienceComponent },
   {
-    path: 'react',
-    component: ReactComponent,
-    data: { projects: reactProjects }
+    path: 'front-end',
+    component: FrontEndComponent,
+    data: { projects: frontEndProjects },
+  },
+  {
+    path: 'back-end',
+    component: BackEndComponent,
+    data: { projects: backEndProjects },
   },
   {
     path: 'mobile-development',
     component: MobileDevelopmentComponent,
-    data: { projects: mobileProjects }
-  },
-  {
-    path: 'web-development',
-    component: WebDevelopmentComponent,
-    data: { projects: webProjects }
-  },
-  {
-    path: 'nodejs',
-    component: NodejsComponent,
-    data: { projects: nodeProjects }
-  },
-  {
-    path: 'python',
-    component: PythonComponent,
-    data: { projects: pythonProjects }
+    data: { projects: mobileProjects },
   },
   { path: 'certifications', component: CertificationsComponent },
   { path: 'contact', component: ContactComponent },
   { path: '', redirectTo: '/experience', pathMatch: 'full' },
-  { path: '**', component: ExperienceComponent }
+  { path: '**', component: ExperienceComponent },
 ];
 @NgModule({
   declarations: [
     AppComponent,
     ExperienceComponent,
-    ReactComponent,
+    FrontEndComponent,
+    BackEndComponent,
     MobileDevelopmentComponent,
-    WebDevelopmentComponent,
-    NodejsComponent,
-    PythonComponent,
     ContactComponent,
     ProjectListComponent,
     ProjectDialogComponent,
-    CertificationsComponent
+    CertificationsComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, { enableTracing: true }),
@@ -83,9 +68,9 @@ const appRoutes: Routes = [
     FontAwesomeModule,
     MatDialogModule,
     MatButtonModule,
-    MatCarouselModule.forRoot()
+    MatCarouselModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
