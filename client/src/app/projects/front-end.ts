@@ -7,7 +7,7 @@ export const frontEndProjects = [
     demoUrl: 'https://angular-portfolio-lahn.herokuapp.com/',
     codeUrl: 'https://github.com/Luis-Hermida/angular-portfolio',
     downloadUrl: 'https://github.com/Luis-Hermida/angular-portfolio',
-    technologies: ['Angular', 'Material'],
+    technologies: ['Angular', 'Material', 'SCSS'],
     projectImages: [
       'https://i.imgur.com/AOGaaad.jpg',
       'https://i.imgur.com/HU2VoOp.jpg',

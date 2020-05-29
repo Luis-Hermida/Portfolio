@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { faFileAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithubSquare,
-  faLinkedinIn
+  faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   faFileAlt = faFileAlt;
@@ -17,9 +17,10 @@ export class AppComponent implements OnInit {
   faBars = faBars;
   isMobile = false;
   isMenuOpen = false;
+  mobilePx = 750;
 
   ngOnInit() {
-    if (window.innerWidth < 1020) {
+    if (window.innerWidth < this.mobilePx) {
       this.isMobile = true;
     }
   }
@@ -29,9 +30,9 @@ export class AppComponent implements OnInit {
   }
 
   onResize(event) {
-    if (event.target.innerWidth < 1020) {
+    if (event.target.innerWidth < this.mobilePx) {
       this.isMobile = true;
-    } else if (event.target.innerWidth > 1020) {
+    } else if (event.target.innerWidth >= this.mobilePx) {
       this.isMobile = false;
     }
   }
